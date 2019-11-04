@@ -1,0 +1,28 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "projet api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anlimoua/test_api_serveur.git"
+  },
+  "keywords": [
+    "api",
+    "nodejs"
+  ],
+  "author": "anlimoua",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anlimoua/test_api_serveur/issues"
+  },
+  "homepage": "https://github.com/anlimoua/test_api_serveur#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "got": "^9.6.0",
+    "request": "^2.88.0"
+  }
+}
