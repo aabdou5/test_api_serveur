@@ -7,10 +7,10 @@ const server = https.Server(app)
 var request = require('request');
 
 // page d'accueil
-/*app.get('/', function (req, res) {
+app.get('/', function (req, res) {
 	res.setHeader('Content-Type','text/html');
 	res.sendFile(__dirname + '/index.html');
-})*/
+})
 /*
 .get('/api/api1/:aliment/:nombre', function(req, res) {
     res.setHeader('Content-Type', 'text/plain');
@@ -40,7 +40,7 @@ myRouter.route('/piscine')
 .delete(function(req,res){
 res.json({message : "Suppression d'une piscine dans la liste", methode : req.method});
 }); */
-myRouter.route('/piscines')
+myRouter.route('/adresse')
 // J'implémente les méthodes GET, PUT, UPDATE et DELETE
 // GET
 .get(function(req,res){
@@ -50,15 +50,10 @@ myRouter.route('/piscines')
     res.json({
       message : "Resultat de votre recherche :",
       adresse : req.query.adresse,
-      coordonnees :  response.body});
+      coordonnees :  JSON.parse(response.body)});
     console.log('body:', body); // Print the HTML for the Google homepage.
   });
-   /*res.json({
-     message : "Liste les piscines de Lille Métropole avec paramètres :",
-     ville : req.query.ville,
-     nbResultat : req.query.maxresultat,
-     methode : req.method });*/
-   // https://127.0.0.1/piscines?ville=Lille&maxresultat=10&method=GET
+
 })//... Suite du code
 
 // Nous demandons à l'application d'utiliser notre routeur
